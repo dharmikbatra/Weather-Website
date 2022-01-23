@@ -10,7 +10,7 @@ const forecast = require('../utils/forecast');
 const staticPath = path.join(__dirname,'../public')
 const viewsPath = path.join(__dirname,'../templates/views');  
 const partialPath = path.join(__dirname,'../templates/partials') 
-
+const port  = process.env.PORT
 const app = express()
 
 //set handlebars 
@@ -85,6 +85,6 @@ app.get('*',(req,res)=>{
         message:'not found'
     })
 })
-app.listen(3000,()=>{
-    console.log('server is up on 3000');
+app.listen(port,()=>{
+    console.log('server is up on '+port);
 })
