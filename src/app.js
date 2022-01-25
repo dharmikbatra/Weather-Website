@@ -10,7 +10,7 @@ const forecast = require('../utils/forecast');
 const staticPath = path.join(__dirname,'../public')
 const viewsPath = path.join(__dirname,'../templates/views');  
 const partialPath = path.join(__dirname,'../templates/partials') 
-const port  = process.env.PORT
+const port  = process.env.PORT || 3000
 const app = express()
 
 //set handlebars 
@@ -28,8 +28,8 @@ app.get('',(req,res)=>{
 
 app.get('/help',(req,res)=>{
     res.render('help',{
-        title:'help',
-        name:'first'
+        title:'Help',
+        name:'Dharmik'
     })
 })
 app.get('/about',(req,res)=>{
